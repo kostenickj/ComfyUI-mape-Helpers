@@ -4515,7 +4515,7 @@ const registerPlugin = async () => {
         get: function() {
           var _a2, _b;
           const group = this.graph.getGroupOnPos(
-            ...this.canvas_mouse
+            ...this.graph_mouse
           );
           const undraggingConnection = this.connecting_node && isMapeVariableNode(this.connecting_node);
           if (!shiftDown || undraggingConnection) {
@@ -4530,8 +4530,8 @@ const registerPlugin = async () => {
               `mape Variable`
             );
             newGetNode.pos = [
-              this.canvas_mouse[0] + 10,
-              this.canvas_mouse[1]
+              this.graph_mouse[0] + 10,
+              this.graph_mouse[1]
             ];
             graphAdd(newGetNode);
             const fromIndex = this.connecting_input.slot_index;
@@ -4563,8 +4563,8 @@ const registerPlugin = async () => {
               `mape Variable`
             );
             newSetNode.pos = [
-              this.canvas_mouse[0] + 10,
-              this.canvas_mouse[1]
+              this.graph_mouse[0] + 10,
+              this.graph_mouse[1]
             ];
             graphAdd(newSetNode);
             const fromIndex = this.connecting_output.slot_index;
@@ -4593,8 +4593,8 @@ const registerPlugin = async () => {
               `mape Variable`
             );
             newGetNode.pos = [
-              this.canvas_mouse[0] + 10,
-              this.canvas_mouse[1] + 50
+              this.graph_mouse[0] + 10,
+              this.graph_mouse[1] + 50
             ];
             graphAdd(newGetNode);
             setWidgetValue(newGetNode, valueType);
